@@ -1,6 +1,14 @@
   (function ($) {
   
   "use strict";
+  var menu = document.querySelector('.nav');
+document.onclick = function(e) {
+  if (menu.contains(e.target)) {
+    var active = menu.querySelector('.active');
+    active.className = active.className.replace('active', '');
+    e.target.className += 'active';
+  }
+}
 
     // COUNTER NUMBERS
     jQuery('.counter-thumb').appear(function() {

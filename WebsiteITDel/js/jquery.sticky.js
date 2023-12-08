@@ -64,7 +64,7 @@
             }
             s.stickyElement
               .css('width', newWidth)
-              .css('position', 'fixed')
+              .css('position', 'absolute')
               .css('top', newTop);
 
             s.stickyElement.parent().addClass(s.className);

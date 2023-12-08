@@ -99,6 +99,10 @@ h6 {
   letter-spacing: -1px;
 }
 
+.title {
+  color: #ffffff;
+}
+
 h1 {
   font-size: var(--h1-font-size);
   font-weight: var(--font-weight-bold);
@@ -312,6 +316,13 @@ strong {
   padding: 15px 25px;
 }
 
+#nav1
+{  
+    background-color:white; 
+    opacity: 0.9; 
+    filter:(opacity=50);       
+}
+
 .navbar-expand-lg .navbar-nav .nav-link.custom-btn {
   color: var(--custom-btn-bg-color);
   margin-top: 8px;
@@ -390,8 +401,9 @@ strong {
 }
 
 .logo {
-  width: 80px;
+  width: 120px;
   height: auto;
+  margin-left: 40px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -400,7 +412,7 @@ strong {
   padding: 20px;
 }
 
-.navbar-nav .nav-link {
+.navbar-nav a.nav-link {
   display: inline-block;
   color: var(--p-color);
   font-size: var(--p-font-size);
@@ -410,10 +422,18 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-link.active, 
-.navbar-nav .nav-link:hover {
+.navbar-nav a.nav-link:active, 
+.navbar-nav a.nav-link:hover {
   background: transparent;
   color: var(--primary-color);
+}
+
+.navbar-nav a.nav-link:hover:before {
+	transform: scaleX(1);
+}
+
+.active:before {
+    transform: scaleX(1)!important;
 }
 
 .dropdown-menu {
@@ -438,8 +458,7 @@ strong {
 .dropdown-menu li:last-child .dropdown-item {
   padding-top: 0;
 }
-
-.dropdown-item.active, 
+ 
 .dropdown-item:active,
 .dropdown-item:focus, 
 .dropdown-item:hover {
@@ -701,6 +720,10 @@ strong {
   padding: 60px 40px;
 }
 
+.text-white d-flex mt-3 {
+  color: #ffffff;
+}
+
 
 /*---------------------------------------
   COUNTER NUMBERS              
@@ -734,7 +757,7 @@ strong {
   overflow: hidden;
 }
 
-.volunteer-section::after {
+/* .volunteer-section::after {
   content: "";
   background: var(--primary-color);
   border-radius: 50%;
@@ -743,7 +766,7 @@ strong {
   right: -80px;
   width: 350px;
   height: 350px;
-}
+} */
 
 .volunteer-form {
   background: var(--white-color);
@@ -771,32 +794,10 @@ strong {
 
 
 /*---------------------------------------
-  DONATE              
------------------------------------------*/
-.donate-section {
-  background-image: url('../images/different-people-doing-volunteer-work.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  padding-top: 150px;
-  padding-bottom: 150px;
-}
-
-.donate-form {
-  background: var(--white-color);
-  border-radius: var(--border-radius-medium);
-  position: relative;
-  overflow: hidden;
-  padding: 50px;
-}
-
-
-/*---------------------------------------
   LEMBAGA        
 -----------------------------------------*/
 .news-detail-header-section {
-  background-image: url('../images/fasilitas/laboratorium.jpg');
+  background-image: url('../images/pengumuman/inagurasi.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1525,21 +1526,6 @@ blockquote::before {
     padding-bottom: 50px;
   }
 
-  .volunteer-section::after {
-    width: 150px;
-    height: 1500px;
-  }
-
-  .testimonial-section::before {
-    width: 150px;
-    height: 150px;
-  }
-
-  .testimonial-section::after {
-    width: 200px;
-    height: 200px;
-  }
-
   #testimonial-carousel .carousel-caption {
     padding-top: 0;
   }
@@ -1644,13 +1630,13 @@ blockquote::before {
   }
 
   .volunteer-image {
-    width: 150px;
-    height: 150px;
+    width: 70px;
+    height: 70px;
   }
 
   .volunteer-section::after {
-    width: 200px;
-    height: 200px;
+    width: 70px;
+    height: 70px;
   }
 
   .testimonial-section::before {
